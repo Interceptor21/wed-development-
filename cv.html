@@ -1,0 +1,282 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sarthak Wani — Resume</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0b5cff;
+      --muted:#6b7280;
+      --bg:#f7f9fc;
+      --paper:#ffffff;
+      --max-width:900px;
+      --pad:20px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0f172a;
+      margin:0;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .resume {
+      width:100%;
+      max-width:var(--max-width);
+      background:linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.98));
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(12,16,24,0.08);
+      overflow:hidden;
+      padding:28px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:28px;
+    }
+
+    /* Header / name */
+    .header{
+      grid-column:1 / span 2;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:4px;
+    }
+    .name {
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .sub {
+      color:var(--muted);
+      font-size:14px;
+      margin-top:6px;
+    }
+
+    /* Left main column */
+    .main {
+      padding-right:6px;
+    }
+    .section{
+      margin-bottom:18px;
+    }
+    .section h3{
+      margin:0 0 10px 0;
+      font-size:15px;
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:0.4px;
+    }
+
+    /* Education list */
+    .edu-item {
+      margin-bottom:10px;
+    }
+    .edu-item .title {
+      font-weight:600;
+    }
+    .edu-item .meta {
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Skills grid */
+    .skills {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:8px 18px;
+    }
+    .skill-badge {
+      background:rgba(11,92,255,0.06);
+      padding:8px 10px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--accent);
+      display:inline-block;
+      font-weight:600;
+    }
+
+    /* Certifications */
+    .cert {
+      margin-bottom:10px;
+      font-size:14px;
+    }
+    .cert small { color:var(--muted) }
+
+    /* Right column / contact + interests */
+    .aside {
+      background:rgba(11,92,255,0.03);
+      border-radius:10px;
+      padding:16px;
+      height:fit-content;
+    }
+    .contact-item {
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      margin-bottom:10px;
+      font-size:14px;
+    }
+    .contact-item b{display:inline-block; min-width:72px; color:var(--muted); font-weight:600}
+    .contact-links a { color:var(--accent); text-decoration:none; word-break:break-word; }
+
+    .interests {
+      margin-top:14px;
+    }
+    .interest-list { display:flex; flex-direction:column; gap:6px; color:var(--muted); font-size:14px; }
+
+    /* Footer line */
+    .footer-note {
+      grid-column:1 / span 2;
+      margin-top:6px;
+      font-size:12px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    /* Print-friendly */
+    @media print {
+      body{padding:0; background:white}
+      .resume{box-shadow:none; border-radius:0; padding:12px; grid-template-columns: 1fr 280px}
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .resume { grid-template-columns: 1fr; padding:18px; }
+      .aside { order:2; margin-top:8px }
+    }
+  </style>
+</head>
+<body>
+  <article class="resume" role="article" aria-label="Sarthak Wani resume">
+    <header class="header">
+      <div>
+        <div class="name">Sarthak Wani</div>
+        <div class="sub">Pune, Maharashtra — BSc Economics (Honours) • Data & Investment Enthusiast</div>
+      </div>
+
+      <div style="text-align:right; font-size:14px; color:var(--muted)">
+        <div><strong>Email:</strong> <a class="contact-links" href="mailto:sarthakwani05@gmail.com">sarthakwani05@gmail.com</a></div>
+        <div><strong>Phone:</strong> <a class="contact-links" href="tel:+917972887743">+91-79728-87743</a></div>
+        <div><strong>LinkedIn:</strong> <a class="contact-links" href="https://www.linkedin.com/in/Sarthak Wani" target="_blank" rel="noopener">linkdin.com/Sarthak Wani</a></div>
+      </div>
+    </header>
+
+    <!-- Left / main content -->
+    <div class="main">
+      <!-- Education -->
+      <section class="section" aria-labelledby="education">
+        <h3 id="education">EDUCATION</h3>
+
+        <div class="edu-item">
+          <div class="title">Symbiosis School of Economics — BSc Economics (Honours)</div>
+          <div class="meta">Pune, Maharashtra | 2024 – Present</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="title">Indian Institute of Management Bangalore — BBA in Digital Business and Entrepreneurship</div>
+          <div class="meta">2024 – online</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="title">Wisdom High International School</div>
+          <div class="meta">A levels score: ABB • Member, Interact Club • Organising team — Whis MUN</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="title">Symbiosis International School</div>
+          <div class="meta">10th grade — 93%</div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" aria-labelledby="skills">
+        <h3 id="skills">SKILLS</h3>
+
+        <div style="margin-bottom:10px; color:var(--muted); font-size:14px">Software tools & domains</div>
+
+        <div class="skills" role="list">
+          <div class="skill-badge">Excel</div>
+          <div class="skill-badge">Word</div>
+          <div class="skill-badge">PowerPoint</div>
+          <div class="skill-badge">LaTeX</div>
+          <div class="skill-badge">Google Analytics</div>
+
+          <div class="skill-badge">Stock Market Research</div>
+          <div class="skill-badge">Equity Analysis</div>
+          <div class="skill-badge">Portfolio Management</div>
+          <div class="skill-badge">Risk Assessment</div>
+          <div class="skill-badge">Asset Allocation</div>
+
+          <div class="skill-badge">Data Collection</div>
+          <div class="skill-badge">Statistical Analysis</div>
+          <div class="skill-badge">Data Visualization</div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section" aria-labelledby="certs">
+        <h3 id="certs">CERTIFICATIONS</h3>
+
+        <div class="cert">
+          <strong>Groww — Stock Analysis Course</strong>
+          <div><small>Performed fundamental stock analysis using real-time data. Created an equity research report on company financials. Studied risk mitigation & portfolio allocation strategies.</small></div>
+        </div>
+
+        <div class="cert">
+          <strong>Wharton Youth Program (Investment)</strong>
+          <div><small>Analysed investment strategies & portfolio diversification; built financial models using real-world case studies; explored risk management & market trends.</small></div>
+        </div>
+
+        <div class="cert">
+          <strong>Export Management — Indian Institute of Import and Export Management</strong>
+          <div><small>Studied export procedures, trade policies & documentation; export pricing & foreign exchange risk management.</small></div>
+        </div>
+      </section>
+
+      <!-- Interests -->
+      <section class="section" aria-labelledby="projects">
+        <h3 id="projects">INTERESTS</h3>
+        <div style="color:var(--muted); font-size:14px;">
+          <ul style="margin:6px 0 0 18px; padding:0;">
+            <li>Entrepreneurship & Business — business development, digital marketing, strategic planning.</li>
+            <li>Data Analytics — statistical analysis, data visualization, trend forecasting.</li>
+            <li>Sports — Football (district & state level), Basketball (high school & district level).</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right / aside -->
+    <aside class="aside" aria-labelledby="contact">
+      <h3 id="contact">CONTACT</h3>
+
+      <div class="contact-item"><b>Location</b><div>Pune, Maharashtra</div></div>
+      <div class="contact-item"><b>Email</b><div><a href="mailto:sarthakwani05@gmail.com">sarthakwani05@gmail.com</a></div></div>
+      <div class="contact-item"><b>Phone</b><div><a href="tel:+917972887743">+91-79728-87743</a></div></div>
+      <div class="contact-item"><b>LinkedIn</b><div><a href="https://www.linkedin.com/in/Sarthak Wani" target="_blank" rel="noopener">linkdin.com/Sarthak Wani</a></div></div>
+
+      <div style="height:1px; background:rgba(11,92,255,0.06); margin:12px 0; border-radius:2px"></div>
+
+      <h3 style="margin-top:0; margin-bottom:8px">EXTRAS</h3>
+      <div style="font-size:13px; color:var(--muted); line-height:1.45">
+        <strong>Clubs & Activities:</strong> Interact Club, Whis MUN organising team.<br><br>
+        <strong>Academic note:</strong> A-levels (ABB); strong foundation in economics and quantitative analysis.
+      </div>
+    </aside>
+
+    <div class="footer-note">
+      Generated HTML CV — content reproduced from the uploaded resume. Source: :contentReference[oaicite:1]{index=1}
+    </div>
+  </article>
+</body>
+</html>
